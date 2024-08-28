@@ -107,7 +107,11 @@ function App() {
 
       const updatedNote = await response.json();
 
-      setNotes([updatedNote, ...notes]);
+      const updatedNotesList = notes.map((note) =>
+        note.id === updatedNote.id ? updatedNote : note
+      );
+
+      setNotes(updatedNotesList);
       setTitle("");
       setContent("");
       setSelectedNote(null);
