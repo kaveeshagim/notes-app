@@ -1,0 +1,12 @@
+tutorial : https://www.freecodecamp.org/news/full-stack-project-tutorial-create-a-notes-app-using-react-and-node-js/
+
+generate migration files :
+npx prisma migrate dev --name init
+
+
+push the new schema :
+npx prisma db push
+
+
+generate prisma client :
+npx prisma generate
